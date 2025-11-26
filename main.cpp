@@ -54,6 +54,18 @@ class CONRAN {
         }
 };
 
+#define MINX 2
+#define MINY 2
+#define MAXX 35
+#define MAXY 20
+void VeKhung(){
+    for (int x = MINX; x <= MAXX; x++)
+        for (int y = MINY; y <= MAXY; y++)
+            if(x== MINX || x == MAXX || y == MINY || y == MAXY){
+                gotoxy(x,y);
+                cout << "+";
+            }
+}
 
 int main(){
     CONRAN r;
@@ -72,6 +84,7 @@ int main(){
 
 
         system("cls");
+        VeKhung();
         r.Ve(); // vẽ rắn
         r.DiChuyen(Huong); // di chuyển
         Sleep(150);
